@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orther.github.io</title>
+<style>
+    .table {border-collapse: collapse;}
+    .table th {border:  solid;}
+    .table tr {border:  solid, text-align: left;}
+    .table textarea {resize: none;}
+</style>
+</head>
+<body>
+    <h1>CV XEM HỒ CÁ</h1>
+    <h2>Hoàn thành CV dưới đây để xem hồ cá</h2>
+    <form action="your-server-endpoint" method="post" onsubmit="showfishtank(event)">
+        <table width="100%" class="table">
+            <tr>
+                <th width="40%" height="100px">
+                    Ảnh đại diện:
+                    <input name="hinh" type="file" required/>
+                </th>
+
+                <th width="60%">
+                    Họ tên:
+                    <input name="hoten" type="text" maxlength="50" required/>
+                    <br>
+                    Vị trí việc làm:
+                    <input name="vitri" type="text" required/>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%">
+                    Thông tin cá nhân
+                    <br>
+                    <textarea rows="10" cols="70"required> </textarea>
+                    <br>
+                    Kỹ năng
+                    <br>
+                    <textarea rows="10" cols="70"required> </textarea>
+                    <br>
+                    Sở thích
+                    <br>
+                    <textarea rows="10" cols="70"required> </textarea>
+                    <br>
+                    Người tham chiếu
+                    <br>
+                    <textarea rows="10" cols="70"required> </textarea>
+                    <br>
+                </th>
+                <th width="60%">
+                    Chứng chỉ
+                    <br>
+                    <textarea rows="22" cols="90" required> </textarea>
+                    <br>
+                    Kinh nghiệm làm việc
+                    <br>
+                    <textarea rows="22" cols="90"required> </textarea>
+                    <br>
+                </th>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+        <input type="reset" valaue="reset">
+    </form>
+
+    <script>
+        function showfishtank(event)
+        {
+            event.preventDefault();
+            window.location.href="fishtank.html";
+        }
+    </script>
+
+    </body>
+</html>
