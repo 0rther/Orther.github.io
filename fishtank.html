@@ -25,6 +25,11 @@
     .fish8 { top: 272px; left: 200px; animation-delay: 1s}
     .fish9 { top: 243px; left: 702px; animation-delay: 2.9s}
     .fish10 { top: 395px; left: 98px; animation-delay: 1.6s}
+
+    .transparent-button
+    {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; border: none; cursor: pointer; z-index: 10;
+    }
 </style>
 
 </head>
@@ -41,5 +46,16 @@
     <img class="fish10 small" src="kisspng-subnautica-below-zero-bony-fishes-vertebrate.png" width="300" height="150";>
 
     <audio id="tank-sounds" src="water-bubbles-257594.mp3" autoplay loop></audio>
+    <button class="transparent-button" onclick="playSound()" title="Click to hear sounds"></button>
+
+    <script>
+        function playSound()
+        {
+            const audio =
+            document.getElementById('tank-sounds');
+            audio.play().catch(error =>
+            { console.error('Error playing sound:', error); });
+        }
+    </script>
 </body>
 </html>
